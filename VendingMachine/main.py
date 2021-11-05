@@ -11,12 +11,13 @@ class VendingMachine:
     def buy(self, num_items, num_coins) -> int:
         if self.NumItems < num_items:
             raise ValueError("Not enough items in the machine")
-        if self.ItemPrice*num_items > num_coins:
+        if self.ItemPrice * num_items > num_coins:
             raise ValueError("Not enough coins")
 
         self.NumItems -= num_items
 
-        return num_coins - num_items*self.ItemPrice
+        return num_coins - num_items * self.ItemPrice
+
 
 def transformSentence(sentence: str) -> str:
     inputs = sentence.split(sep=' ')
@@ -33,6 +34,8 @@ def transformSentence(sentence: str) -> str:
         outputs.append(output)
 
     return ' '.join(outputs)
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     i = 'c'
